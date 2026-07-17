@@ -1,0 +1,216 @@
+item,condition,sentence,npi_word,log_prob,npi_position,environment
+1,A,The manager did not approve any proposals.,any,-4.86328125,6,sentential_negation
+1,B,The manager who did not approve the budget reviewed any proposals.,any,-6.92578125,10,sentential_negation
+1,C,The manager did approve any proposals.,any,-7.94921875,5,sentential_negation
+2,A,The teacher has not assigned any homework.,any,-1.6142578125,6,sentential_negation
+2,B,The teacher who has not finished the grading assigned any homework.,any,-10.171875,10,sentential_negation
+2,C,The teacher has assigned any homework.,any,-10.2578125,5,sentential_negation
+3,A,The committee did not consider any alternatives.,any,-2.517578125,6,sentential_negation
+3,B,The committee that did not meet last week considered any alternatives.,any,-9.0390625,10,sentential_negation
+3,C,The committee did consider any alternatives.,any,-7.52734375,5,sentential_negation
+4,A,The doctor has not recommended any treatment.,any,-1.6796875,6,sentential_negation
+4,B,The doctor who has not seen the results recommended any treatment.,any,-6.40625,10,sentential_negation
+4,C,The doctor has recommended any treatment.,any,-10.7109375,5,sentential_negation
+5,A,The company did not hire any contractors.,any,-2.22265625,6,sentential_negation
+5,B,The company that did not post the earnings hired any contractors.,any,-11.6015625,10,sentential_negation
+5,C,The company did hire any contractors.,any,-8.8359375,5,sentential_negation
+6,A,The researcher did not find any evidence.,any,-1.1240234375,6,sentential_negation
+6,B,The researcher who did not publish the paper found any evidence.,any,-6.625,10,sentential_negation
+6,C,The researcher did find any evidence.,any,-5.98828125,5,sentential_negation
+7,A,The chef did not use any butter.,any,-1.9892578125,6,sentential_negation
+7,B,The chef who did not prepare the appetizer used any butter.,any,-7.2265625,10,sentential_negation
+7,C,The chef did use any butter.,any,-7.078125,5,sentential_negation
+8,A,The pilot did not report any turbulence.,any,-1.0244140625,6,sentential_negation
+8,B,The pilot who did not complete the checklist reported any turbulence.,any,-7.47265625,10,sentential_negation
+8,C,The pilot did report any turbulence.,any,-6.38671875,5,sentential_negation
+9,A,The bank did not offer any discounts.,any,-1.048828125,6,sentential_negation
+9,B,The bank that did not update the system offered any discounts.,any,-8.53125,10,sentential_negation
+9,C,The bank did offer any discounts.,any,-7.11328125,5,sentential_negation
+10,A,The inspector did not notice any damage.,any,-1.5029296875,6,sentential_negation
+10,B,The inspector who did not review the footage noticed any damage.,any,-7.73046875,10,sentential_negation
+10,C,The inspector did notice any damage.,any,-5.94921875,5,sentential_negation
+11,A,The students have not submitted any essays.,any,-1.923828125,6,sentential_negation
+11,B,The students who have not attended the lecture submitted any essays.,any,-6.12109375,10,sentential_negation
+11,C,The students have submitted any essays.,any,-10.9921875,5,sentential_negation
+12,A,The engineer did not detect any flaws.,any,-1.072265625,6,sentential_negation
+12,B,The engineer who did not run the simulation detected any flaws.,any,-7.51171875,10,sentential_negation
+12,C,The engineer did detect any flaws.,any,-5.0859375,5,sentential_negation
+13,A,The librarian has not catalogued any donations.,any,-2.923828125,7,sentential_negation
+13,B,The librarian who has not sorted the returns catalogued any donations.,any,-6.89453125,11,sentential_negation
+13,C,The librarian has catalogued any donations.,any,-8.3671875,6,sentential_negation
+14,A,The officer did not file any complaints.,any,-2.001953125,6,sentential_negation
+14,B,The officer who did not interview the witness filed any complaints.,any,-10.0078125,10,sentential_negation
+14,C,The officer did file any complaints.,any,-7.4453125,5,sentential_negation
+15,A,The architect did not draft any blueprints.,any,-2.9375,6,sentential_negation
+15,B,The architect who did not visit the site drafted any blueprints.,any,-9.0703125,10,sentential_negation
+15,C,The architect did draft any blueprints.,any,-8.109375,5,sentential_negation
+16,A,The editor has not approved any articles.,any,-3.767578125,6,sentential_negation
+16,B,The editor who has not read the manuscript approved any articles.,any,-10.7421875,10,sentential_negation
+16,C,The editor has approved any articles.,any,-10.6484375,5,sentential_negation
+17,A,The scientist did not observe any reactions.,any,-1.6123046875,6,sentential_negation
+17,B,The scientist who did not calibrate the instrument observed any reactions.,any,-8.6640625,10,sentential_negation
+17,C,The scientist did observe any reactions.,any,-4.75,5,sentential_negation
+18,A,The agency did not receive any applications.,any,-1.109375,6,sentential_negation
+18,B,The agency that did not open the portal received any applications.,any,-8.3125,10,sentential_negation
+18,C,The agency did receive any applications.,any,-6.21875,5,sentential_negation
+19,A,The lawyer did not raise any objections.,any,-1.66796875,6,sentential_negation
+19,B,The lawyer who did not review the contract raised any objections.,any,-7.90234375,10,sentential_negation
+19,C,The lawyer did raise any objections.,any,-8.9375,5,sentential_negation
+20,A,The curator has not displayed any paintings.,any,-1.7333984375,6,sentential_negation
+20,B,The curator who has not organized the exhibit displayed any paintings.,any,-4.578125,10,sentential_negation
+20,C,The curator has displayed any paintings.,any,-10.578125,5,sentential_negation
+21,A,The director did not schedule any meetings.,any,-2.10546875,6,sentential_negation
+21,B,The director who did not cancel the conference scheduled any meetings.,any,-12.8984375,10,sentential_negation
+21,C,The director did schedule any meetings.,any,-9.7734375,5,sentential_negation
+22,A,The mechanic did not replace any parts.,any,-3.81640625,6,sentential_negation
+22,B,The mechanic who did not inspect the engine replaced any parts.,any,-7.8046875,10,sentential_negation
+22,C,The mechanic did replace any parts.,any,-7.57421875,5,sentential_negation
+23,A,The auditor has not flagged any discrepancies.,any,-0.6015625,6,sentential_negation
+23,B,The auditor who has not examined the records flagged any discrepancies.,any,-7.54296875,10,sentential_negation
+23,C,The auditor has flagged any discrepancies.,any,-8.9140625,5,sentential_negation
+24,A,The surgeon did not perform any procedures.,any,-2.572265625,6,sentential_negation
+24,B,The surgeon who did not consult the patient performed any procedures.,any,-8.625,10,sentential_negation
+24,C,The surgeon did perform any procedures.,any,-7.6796875,5,sentential_negation
+25,A,The warden did not grant any privileges.,any,-3.38671875,6,sentential_negation
+25,B,The warden who did not review the appeals granted any privileges.,any,-7.1484375,10,sentential_negation
+25,C,The warden did grant any privileges.,any,-8.0546875,5,sentential_negation
+26,A,No manager approved any proposals.,any,-4.02734375,4,no_subject
+26,B,The manager that no assistant contacted approved any proposals.,any,-5.484375,8,no_subject
+26,C,The manager approved any proposals.,any,-8.5859375,4,no_subject
+27,A,No teacher assigned any homework.,any,-4.2265625,4,no_subject
+27,B,The teacher that no student questioned assigned any homework.,any,-5.0,8,no_subject
+27,C,The teacher assigned any homework.,any,-10.421875,4,no_subject
+28,A,No committee considered any alternatives.,any,-4.05859375,4,no_subject
+28,B,The committee that no director advised considered any alternatives.,any,-6.1953125,8,no_subject
+28,C,The committee considered any alternatives.,any,-9.828125,4,no_subject
+29,A,No doctor recommended any treatment.,any,-3.029296875,4,no_subject
+29,B,The doctor that no nurse assisted recommended any treatment.,any,-5.5390625,8,no_subject
+29,C,The doctor recommended any treatment.,any,-12.2109375,4,no_subject
+30,A,No company hired any contractors.,any,-4.49609375,4,no_subject
+30,B,The company that no investor backed hired any contractors.,any,-9.578125,8,no_subject
+30,C,The company hired any contractors.,any,-14.0859375,4,no_subject
+31,A,No researcher found any evidence.,any,-2.5703125,4,no_subject
+31,B,The researcher that no journal published found any evidence.,any,-3.740234375,8,no_subject
+31,C,The researcher found any evidence.,any,-11.5078125,4,no_subject
+32,A,No inspector noticed any damage.,any,-2.390625,4,no_subject
+32,B,The inspector that no supervisor briefed noticed any damage.,any,-5.52734375,8,no_subject
+32,C,The inspector noticed any damage.,any,-12.296875,4,no_subject
+33,A,No lawyer raised any objections.,any,-2.29296875,4,no_subject
+33,B,The lawyer that no client hired raised any objections.,any,-8.6171875,8,no_subject
+33,C,The lawyer raised any objections.,any,-12.328125,4,no_subject
+34,A,No engineer detected any flaws.,any,-1.8515625,4,no_subject
+34,B,The engineer that no manager consulted detected any flaws.,any,-7.140625,8,no_subject
+34,C,The engineer detected any flaws.,any,-9.390625,4,no_subject
+35,A,No auditor flagged any discrepancies.,any,-1.4326171875,4,no_subject
+35,B,The auditor that no partner supervised flagged any discrepancies.,any,-8.3671875,8,no_subject
+35,C,The auditor flagged any discrepancies.,any,-9.3046875,4,no_subject
+36,A,No editor approved any articles.,any,-4.484375,4,no_subject
+36,B,The editor that no writer emailed approved any articles.,any,-6.234375,8,no_subject
+36,C,The editor approved any articles.,any,-10.6015625,4,no_subject
+37,A,No official filed any complaints.,any,-3.98828125,4,no_subject
+37,B,The official that no citizen petitioned filed any complaints.,any,-8.203125,8,no_subject
+37,C,The official filed any complaints.,any,-12.203125,4,no_subject
+38,A,No architect drafted any blueprints.,any,-4.546875,4,no_subject
+38,B,The architect that no developer approached drafted any blueprints.,any,-9.8515625,8,no_subject
+38,C,The architect drafted any blueprints.,any,-12.390625,4,no_subject
+39,A,No curator displayed any paintings.,any,-3.6484375,4,no_subject
+39,B,The curator that no donor funded displayed any paintings.,any,-7.484375,8,no_subject
+39,C,The curator displayed any paintings.,any,-12.234375,4,no_subject
+40,A,No surgeon performed any procedures.,any,-3.501953125,4,no_subject
+40,B,The surgeon that no patient trusted performed any procedures.,any,-8.125,8,no_subject
+40,C,The surgeon performed any procedures.,any,-11.03125,4,no_subject
+41,A,Few managers approved any proposals.,any,-6.7734375,4,few_subject
+41,B,The manager that few assistants contacted approved any proposals.,any,-7.41015625,8,few_subject
+41,C,Several managers approved any proposals.,any,-11.625,4,few_subject
+42,A,Few teachers assigned any homework.,any,-5.7421875,4,few_subject
+42,B,The teacher that few students questioned assigned any homework.,any,-6.671875,8,few_subject
+42,C,Several teachers assigned any homework.,any,-14.2890625,4,few_subject
+43,A,Few committees considered any alternatives.,any,-6.078125,4,few_subject
+43,B,The committee that few directors advised considered any alternatives.,any,-7.26171875,8,few_subject
+43,C,Several committees considered any alternatives.,any,-11.2421875,4,few_subject
+44,A,Few doctors recommended any treatment.,any,-4.37890625,4,few_subject
+44,B,The doctor that few nurses assisted recommended any treatment.,any,-9.0859375,8,few_subject
+44,C,Several doctors recommended any treatment.,any,-13.359375,4,few_subject
+45,A,Few companies hired any contractors.,any,-5.91796875,4,few_subject
+45,B,The company that few investors backed hired any contractors.,any,-10.984375,8,few_subject
+45,C,Several companies hired any contractors.,any,-15.6171875,4,few_subject
+46,A,Few researchers found any evidence.,any,-2.931640625,4,few_subject
+46,B,The researcher that few journals published found any evidence.,any,-6.9765625,8,few_subject
+46,C,Several researchers found any evidence.,any,-13.1171875,4,few_subject
+47,A,Few inspectors noticed any damage.,any,-3.2890625,4,few_subject
+47,B,The inspector that few supervisors briefed noticed any damage.,any,-8.1328125,8,few_subject
+47,C,Several inspectors noticed any damage.,any,-13.8125,4,few_subject
+48,A,Few lawyers raised any objections.,any,-4.46875,4,few_subject
+48,B,The lawyer that few clients hired raised any objections.,any,-10.6484375,8,few_subject
+48,C,Several lawyers raised any objections.,any,-14.3515625,4,few_subject
+49,A,Few engineers detected any flaws.,any,-3.166015625,4,few_subject
+49,B,The engineer that few managers consulted detected any flaws.,any,-7.66015625,8,few_subject
+49,C,Several engineers detected any flaws.,any,-11.8515625,4,few_subject
+50,A,Few auditors flagged any discrepancies.,any,-3.904296875,4,few_subject
+50,B,The auditor that few partners supervised flagged any discrepancies.,any,-8.296875,8,few_subject
+50,C,Several auditors flagged any discrepancies.,any,-11.4765625,4,few_subject
+51,A,Few editors approved any articles.,any,-6.30859375,4,few_subject
+51,B,The editor that few writers emailed approved any articles.,any,-8.015625,8,few_subject
+51,C,Several editors approved any articles.,any,-10.9765625,4,few_subject
+52,A,Few officials filed any complaints.,any,-5.22265625,4,few_subject
+52,B,The official that few citizens petitioned filed any complaints.,any,-11.171875,8,few_subject
+52,C,Several officials filed any complaints.,any,-13.2421875,4,few_subject
+53,A,Few architects drafted any blueprints.,any,-5.87890625,4,few_subject
+53,B,The architect that few developers approached drafted any blueprints.,any,-10.828125,8,few_subject
+53,C,Several architects drafted any blueprints.,any,-14.8828125,4,few_subject
+54,A,Few curators displayed any paintings.,any,-5.078125,5,few_subject
+54,B,The curator that few donors funded displayed any paintings.,any,-9.6953125,8,few_subject
+54,C,Several curators displayed any paintings.,any,-13.453125,5,few_subject
+55,A,Few surgeons performed any procedures.,any,-5.16015625,4,few_subject
+55,B,The surgeon that few patients trusted performed any procedures.,any,-9.5,8,few_subject
+55,C,Several surgeons performed any procedures.,any,-13.03125,4,few_subject
+56,A,Did the manager approve any proposals?,any,-5.1875,5,question
+56,C,The manager approved any proposals.,any,-8.5859375,4,question
+57,A,Did the teacher assign any homework?,any,-4.1640625,5,question
+57,C,The teacher assigned any homework.,any,-10.421875,4,question
+58,A,Did the committee consider any alternatives?,any,-2.73046875,5,question
+58,C,The committee considered any alternatives.,any,-9.828125,4,question
+59,A,Did the doctor recommend any treatment?,any,-1.9697265625,5,question
+59,C,The doctor recommended any treatment.,any,-12.2109375,4,question
+60,A,Did the company hire any contractors?,any,-3.7890625,5,question
+60,C,The company hired any contractors.,any,-14.0859375,4,question
+61,A,Did the researcher find any evidence?,any,-1.814453125,5,question
+61,C,The researcher found any evidence.,any,-11.5078125,4,question
+62,A,Did the inspector notice any damage?,any,-1.8671875,5,question
+62,C,The inspector noticed any damage.,any,-12.296875,4,question
+63,A,Did the lawyer raise any objections?,any,-1.9921875,5,question
+63,C,The lawyer raised any objections.,any,-12.328125,4,question
+64,A,Did the engineer detect any flaws?,any,-1.669921875,5,question
+64,C,The engineer detected any flaws.,any,-9.390625,4,question
+65,A,Did the auditor flag any discrepancies?,any,-1.818359375,5,question
+65,C,The auditor flagged any discrepancies.,any,-9.3046875,4,question
+66,A,Did the editor approve any articles?,any,-5.33984375,5,question
+66,C,The editor approved any articles.,any,-10.6015625,4,question
+67,A,Did the official file any complaints?,any,-10.21875,5,question
+67,C,The official filed any complaints.,any,-12.203125,4,question
+68,A,Did the architect draft any blueprints?,any,-5.4296875,5,question
+68,C,The architect drafted any blueprints.,any,-12.390625,4,question
+69,A,Did the curator display any paintings?,any,-2.818359375,5,question
+69,C,The curator displayed any paintings.,any,-12.234375,4,question
+70,A,Did the surgeon perform any procedures?,any,-3.619140625,5,question
+70,C,The surgeon performed any procedures.,any,-11.03125,4,question
+71,A,The manager left without approving any proposals.,any,-3.189453125,6,without
+71,C,The manager left after approving any proposals.,any,-9.9140625,6,without
+72,A,The teacher departed without assigning any homework.,any,-1.5166015625,6,without
+72,C,The teacher departed after assigning any homework.,any,-9.90625,6,without
+73,A,The committee adjourned without considering any alternatives.,any,-2.404296875,6,without
+73,C,The committee adjourned after considering any alternatives.,any,-9.265625,6,without
+74,A,The doctor retired without recommending any treatment.,any,-1.5615234375,6,without
+74,C,The doctor retired after recommending any treatment.,any,-9.6328125,6,without
+75,A,The company expanded without hiring any contractors.,any,-2.294921875,6,without
+75,C,The company expanded after hiring any contractors.,any,-14.640625,6,without
+76,A,The researcher published without finding any evidence.,any,-2.509765625,6,without
+76,C,The researcher published after finding any evidence.,any,-8.40625,6,without
+77,A,The inspector left without noticing any damage.,any,-3.1875,6,without
+77,C,The inspector left after noticing any damage.,any,-10.5703125,6,without
+78,A,The lawyer rested without raising any objections.,any,-1.4609375,6,without
+78,C,The lawyer rested after raising any objections.,any,-10.859375,6,without
+79,A,The engineer shipped without detecting any flaws.,any,-3.0390625,6,without
+79,C,The engineer shipped after detecting any flaws.,any,-7.24609375,6,without
+80,A,The auditor signed off without flagging any discrepancies.,any,-1.09375,8,without
+80,C,The auditor signed off after flagging any discrepancies.,any,-9.28125,8,without

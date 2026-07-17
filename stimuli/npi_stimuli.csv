@@ -1,0 +1,216 @@
+item,environment,condition,sentence,npi,design
+1,sentential_negation,A,The manager did not approve any proposals.,any,triplet
+1,sentential_negation,B,The manager who did not approve the budget reviewed any proposals.,any,triplet
+1,sentential_negation,C,The manager did approve any proposals.,any,triplet
+2,sentential_negation,A,The teacher has not assigned any homework.,any,triplet
+2,sentential_negation,B,The teacher who has not finished the grading assigned any homework.,any,triplet
+2,sentential_negation,C,The teacher has assigned any homework.,any,triplet
+3,sentential_negation,A,The committee did not consider any alternatives.,any,triplet
+3,sentential_negation,B,The committee that did not meet last week considered any alternatives.,any,triplet
+3,sentential_negation,C,The committee did consider any alternatives.,any,triplet
+4,sentential_negation,A,The doctor has not recommended any treatment.,any,triplet
+4,sentential_negation,B,The doctor who has not seen the results recommended any treatment.,any,triplet
+4,sentential_negation,C,The doctor has recommended any treatment.,any,triplet
+5,sentential_negation,A,The company did not hire any contractors.,any,triplet
+5,sentential_negation,B,The company that did not post the earnings hired any contractors.,any,triplet
+5,sentential_negation,C,The company did hire any contractors.,any,triplet
+6,sentential_negation,A,The researcher did not find any evidence.,any,triplet
+6,sentential_negation,B,The researcher who did not publish the paper found any evidence.,any,triplet
+6,sentential_negation,C,The researcher did find any evidence.,any,triplet
+7,sentential_negation,A,The chef did not use any butter.,any,triplet
+7,sentential_negation,B,The chef who did not prepare the appetizer used any butter.,any,triplet
+7,sentential_negation,C,The chef did use any butter.,any,triplet
+8,sentential_negation,A,The pilot did not report any turbulence.,any,triplet
+8,sentential_negation,B,The pilot who did not complete the checklist reported any turbulence.,any,triplet
+8,sentential_negation,C,The pilot did report any turbulence.,any,triplet
+9,sentential_negation,A,The bank did not offer any discounts.,any,triplet
+9,sentential_negation,B,The bank that did not update the system offered any discounts.,any,triplet
+9,sentential_negation,C,The bank did offer any discounts.,any,triplet
+10,sentential_negation,A,The inspector did not notice any damage.,any,triplet
+10,sentential_negation,B,The inspector who did not review the footage noticed any damage.,any,triplet
+10,sentential_negation,C,The inspector did notice any damage.,any,triplet
+11,sentential_negation,A,The students have not submitted any essays.,any,triplet
+11,sentential_negation,B,The students who have not attended the lecture submitted any essays.,any,triplet
+11,sentential_negation,C,The students have submitted any essays.,any,triplet
+12,sentential_negation,A,The engineer did not detect any flaws.,any,triplet
+12,sentential_negation,B,The engineer who did not run the simulation detected any flaws.,any,triplet
+12,sentential_negation,C,The engineer did detect any flaws.,any,triplet
+13,sentential_negation,A,The librarian has not catalogued any donations.,any,triplet
+13,sentential_negation,B,The librarian who has not sorted the returns catalogued any donations.,any,triplet
+13,sentential_negation,C,The librarian has catalogued any donations.,any,triplet
+14,sentential_negation,A,The officer did not file any complaints.,any,triplet
+14,sentential_negation,B,The officer who did not interview the witness filed any complaints.,any,triplet
+14,sentential_negation,C,The officer did file any complaints.,any,triplet
+15,sentential_negation,A,The architect did not draft any blueprints.,any,triplet
+15,sentential_negation,B,The architect who did not visit the site drafted any blueprints.,any,triplet
+15,sentential_negation,C,The architect did draft any blueprints.,any,triplet
+16,sentential_negation,A,The editor has not approved any articles.,any,triplet
+16,sentential_negation,B,The editor who has not read the manuscript approved any articles.,any,triplet
+16,sentential_negation,C,The editor has approved any articles.,any,triplet
+17,sentential_negation,A,The scientist did not observe any reactions.,any,triplet
+17,sentential_negation,B,The scientist who did not calibrate the instrument observed any reactions.,any,triplet
+17,sentential_negation,C,The scientist did observe any reactions.,any,triplet
+18,sentential_negation,A,The agency did not receive any applications.,any,triplet
+18,sentential_negation,B,The agency that did not open the portal received any applications.,any,triplet
+18,sentential_negation,C,The agency did receive any applications.,any,triplet
+19,sentential_negation,A,The lawyer did not raise any objections.,any,triplet
+19,sentential_negation,B,The lawyer who did not review the contract raised any objections.,any,triplet
+19,sentential_negation,C,The lawyer did raise any objections.,any,triplet
+20,sentential_negation,A,The curator has not displayed any paintings.,any,triplet
+20,sentential_negation,B,The curator who has not organized the exhibit displayed any paintings.,any,triplet
+20,sentential_negation,C,The curator has displayed any paintings.,any,triplet
+21,sentential_negation,A,The director did not schedule any meetings.,any,triplet
+21,sentential_negation,B,The director who did not cancel the conference scheduled any meetings.,any,triplet
+21,sentential_negation,C,The director did schedule any meetings.,any,triplet
+22,sentential_negation,A,The mechanic did not replace any parts.,any,triplet
+22,sentential_negation,B,The mechanic who did not inspect the engine replaced any parts.,any,triplet
+22,sentential_negation,C,The mechanic did replace any parts.,any,triplet
+23,sentential_negation,A,The auditor has not flagged any discrepancies.,any,triplet
+23,sentential_negation,B,The auditor who has not examined the records flagged any discrepancies.,any,triplet
+23,sentential_negation,C,The auditor has flagged any discrepancies.,any,triplet
+24,sentential_negation,A,The surgeon did not perform any procedures.,any,triplet
+24,sentential_negation,B,The surgeon who did not consult the patient performed any procedures.,any,triplet
+24,sentential_negation,C,The surgeon did perform any procedures.,any,triplet
+25,sentential_negation,A,The warden did not grant any privileges.,any,triplet
+25,sentential_negation,B,The warden who did not review the appeals granted any privileges.,any,triplet
+25,sentential_negation,C,The warden did grant any privileges.,any,triplet
+26,no_subject,A,No manager approved any proposals.,any,triplet
+26,no_subject,B,The manager that no assistant contacted approved any proposals.,any,triplet
+26,no_subject,C,The manager approved any proposals.,any,triplet
+27,no_subject,A,No teacher assigned any homework.,any,triplet
+27,no_subject,B,The teacher that no student questioned assigned any homework.,any,triplet
+27,no_subject,C,The teacher assigned any homework.,any,triplet
+28,no_subject,A,No committee considered any alternatives.,any,triplet
+28,no_subject,B,The committee that no director advised considered any alternatives.,any,triplet
+28,no_subject,C,The committee considered any alternatives.,any,triplet
+29,no_subject,A,No doctor recommended any treatment.,any,triplet
+29,no_subject,B,The doctor that no nurse assisted recommended any treatment.,any,triplet
+29,no_subject,C,The doctor recommended any treatment.,any,triplet
+30,no_subject,A,No company hired any contractors.,any,triplet
+30,no_subject,B,The company that no investor backed hired any contractors.,any,triplet
+30,no_subject,C,The company hired any contractors.,any,triplet
+31,no_subject,A,No researcher found any evidence.,any,triplet
+31,no_subject,B,The researcher that no journal published found any evidence.,any,triplet
+31,no_subject,C,The researcher found any evidence.,any,triplet
+32,no_subject,A,No inspector noticed any damage.,any,triplet
+32,no_subject,B,The inspector that no supervisor briefed noticed any damage.,any,triplet
+32,no_subject,C,The inspector noticed any damage.,any,triplet
+33,no_subject,A,No lawyer raised any objections.,any,triplet
+33,no_subject,B,The lawyer that no client hired raised any objections.,any,triplet
+33,no_subject,C,The lawyer raised any objections.,any,triplet
+34,no_subject,A,No engineer detected any flaws.,any,triplet
+34,no_subject,B,The engineer that no manager consulted detected any flaws.,any,triplet
+34,no_subject,C,The engineer detected any flaws.,any,triplet
+35,no_subject,A,No auditor flagged any discrepancies.,any,triplet
+35,no_subject,B,The auditor that no partner supervised flagged any discrepancies.,any,triplet
+35,no_subject,C,The auditor flagged any discrepancies.,any,triplet
+36,no_subject,A,No editor approved any articles.,any,triplet
+36,no_subject,B,The editor that no writer emailed approved any articles.,any,triplet
+36,no_subject,C,The editor approved any articles.,any,triplet
+37,no_subject,A,No official filed any complaints.,any,triplet
+37,no_subject,B,The official that no citizen petitioned filed any complaints.,any,triplet
+37,no_subject,C,The official filed any complaints.,any,triplet
+38,no_subject,A,No architect drafted any blueprints.,any,triplet
+38,no_subject,B,The architect that no developer approached drafted any blueprints.,any,triplet
+38,no_subject,C,The architect drafted any blueprints.,any,triplet
+39,no_subject,A,No curator displayed any paintings.,any,triplet
+39,no_subject,B,The curator that no donor funded displayed any paintings.,any,triplet
+39,no_subject,C,The curator displayed any paintings.,any,triplet
+40,no_subject,A,No surgeon performed any procedures.,any,triplet
+40,no_subject,B,The surgeon that no patient trusted performed any procedures.,any,triplet
+40,no_subject,C,The surgeon performed any procedures.,any,triplet
+41,few_subject,A,Few managers approved any proposals.,any,triplet
+41,few_subject,B,The manager that few assistants contacted approved any proposals.,any,triplet
+41,few_subject,C,Several managers approved any proposals.,any,triplet
+42,few_subject,A,Few teachers assigned any homework.,any,triplet
+42,few_subject,B,The teacher that few students questioned assigned any homework.,any,triplet
+42,few_subject,C,Several teachers assigned any homework.,any,triplet
+43,few_subject,A,Few committees considered any alternatives.,any,triplet
+43,few_subject,B,The committee that few directors advised considered any alternatives.,any,triplet
+43,few_subject,C,Several committees considered any alternatives.,any,triplet
+44,few_subject,A,Few doctors recommended any treatment.,any,triplet
+44,few_subject,B,The doctor that few nurses assisted recommended any treatment.,any,triplet
+44,few_subject,C,Several doctors recommended any treatment.,any,triplet
+45,few_subject,A,Few companies hired any contractors.,any,triplet
+45,few_subject,B,The company that few investors backed hired any contractors.,any,triplet
+45,few_subject,C,Several companies hired any contractors.,any,triplet
+46,few_subject,A,Few researchers found any evidence.,any,triplet
+46,few_subject,B,The researcher that few journals published found any evidence.,any,triplet
+46,few_subject,C,Several researchers found any evidence.,any,triplet
+47,few_subject,A,Few inspectors noticed any damage.,any,triplet
+47,few_subject,B,The inspector that few supervisors briefed noticed any damage.,any,triplet
+47,few_subject,C,Several inspectors noticed any damage.,any,triplet
+48,few_subject,A,Few lawyers raised any objections.,any,triplet
+48,few_subject,B,The lawyer that few clients hired raised any objections.,any,triplet
+48,few_subject,C,Several lawyers raised any objections.,any,triplet
+49,few_subject,A,Few engineers detected any flaws.,any,triplet
+49,few_subject,B,The engineer that few managers consulted detected any flaws.,any,triplet
+49,few_subject,C,Several engineers detected any flaws.,any,triplet
+50,few_subject,A,Few auditors flagged any discrepancies.,any,triplet
+50,few_subject,B,The auditor that few partners supervised flagged any discrepancies.,any,triplet
+50,few_subject,C,Several auditors flagged any discrepancies.,any,triplet
+51,few_subject,A,Few editors approved any articles.,any,triplet
+51,few_subject,B,The editor that few writers emailed approved any articles.,any,triplet
+51,few_subject,C,Several editors approved any articles.,any,triplet
+52,few_subject,A,Few officials filed any complaints.,any,triplet
+52,few_subject,B,The official that few citizens petitioned filed any complaints.,any,triplet
+52,few_subject,C,Several officials filed any complaints.,any,triplet
+53,few_subject,A,Few architects drafted any blueprints.,any,triplet
+53,few_subject,B,The architect that few developers approached drafted any blueprints.,any,triplet
+53,few_subject,C,Several architects drafted any blueprints.,any,triplet
+54,few_subject,A,Few curators displayed any paintings.,any,triplet
+54,few_subject,B,The curator that few donors funded displayed any paintings.,any,triplet
+54,few_subject,C,Several curators displayed any paintings.,any,triplet
+55,few_subject,A,Few surgeons performed any procedures.,any,triplet
+55,few_subject,B,The surgeon that few patients trusted performed any procedures.,any,triplet
+55,few_subject,C,Several surgeons performed any procedures.,any,triplet
+56,question,A,Did the manager approve any proposals?,any,pair
+56,question,C,The manager approved any proposals.,any,pair
+57,question,A,Did the teacher assign any homework?,any,pair
+57,question,C,The teacher assigned any homework.,any,pair
+58,question,A,Did the committee consider any alternatives?,any,pair
+58,question,C,The committee considered any alternatives.,any,pair
+59,question,A,Did the doctor recommend any treatment?,any,pair
+59,question,C,The doctor recommended any treatment.,any,pair
+60,question,A,Did the company hire any contractors?,any,pair
+60,question,C,The company hired any contractors.,any,pair
+61,question,A,Did the researcher find any evidence?,any,pair
+61,question,C,The researcher found any evidence.,any,pair
+62,question,A,Did the inspector notice any damage?,any,pair
+62,question,C,The inspector noticed any damage.,any,pair
+63,question,A,Did the lawyer raise any objections?,any,pair
+63,question,C,The lawyer raised any objections.,any,pair
+64,question,A,Did the engineer detect any flaws?,any,pair
+64,question,C,The engineer detected any flaws.,any,pair
+65,question,A,Did the auditor flag any discrepancies?,any,pair
+65,question,C,The auditor flagged any discrepancies.,any,pair
+66,question,A,Did the editor approve any articles?,any,pair
+66,question,C,The editor approved any articles.,any,pair
+67,question,A,Did the official file any complaints?,any,pair
+67,question,C,The official filed any complaints.,any,pair
+68,question,A,Did the architect draft any blueprints?,any,pair
+68,question,C,The architect drafted any blueprints.,any,pair
+69,question,A,Did the curator display any paintings?,any,pair
+69,question,C,The curator displayed any paintings.,any,pair
+70,question,A,Did the surgeon perform any procedures?,any,pair
+70,question,C,The surgeon performed any procedures.,any,pair
+71,without,A,The manager left without approving any proposals.,any,pair
+71,without,C,The manager left after approving any proposals.,any,pair
+72,without,A,The teacher departed without assigning any homework.,any,pair
+72,without,C,The teacher departed after assigning any homework.,any,pair
+73,without,A,The committee adjourned without considering any alternatives.,any,pair
+73,without,C,The committee adjourned after considering any alternatives.,any,pair
+74,without,A,The doctor retired without recommending any treatment.,any,pair
+74,without,C,The doctor retired after recommending any treatment.,any,pair
+75,without,A,The company expanded without hiring any contractors.,any,pair
+75,without,C,The company expanded after hiring any contractors.,any,pair
+76,without,A,The researcher published without finding any evidence.,any,pair
+76,without,C,The researcher published after finding any evidence.,any,pair
+77,without,A,The inspector left without noticing any damage.,any,pair
+77,without,C,The inspector left after noticing any damage.,any,pair
+78,without,A,The lawyer rested without raising any objections.,any,pair
+78,without,C,The lawyer rested after raising any objections.,any,pair
+79,without,A,The engineer shipped without detecting any flaws.,any,pair
+79,without,C,The engineer shipped after detecting any flaws.,any,pair
+80,without,A,The auditor signed off without flagging any discrepancies.,any,pair
+80,without,C,The auditor signed off after flagging any discrepancies.,any,pair
