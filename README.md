@@ -32,19 +32,19 @@ which is something probes cannot do.
 
 ```mermaid
 flowchart TD
-    S["npi_stimuli.csv&lt;br/&gt;80 items · 5 licensing environments&lt;br/&gt;(single source of truth)"]
+    S["npi_stimuli.csv<br/>80 items · 5 licensing environments<br/>(single source of truth)"]
 
-    S --&gt; N1["01 · Behavioral&lt;br/&gt;Does P(any) track scope?"]
-    S --&gt; N2["02 · Discovery (65k SAE)&lt;br/&gt;Find licensing features at the&lt;br/&gt;PRE-NPI position"]
-    S --&gt; N3["03 · Causal Ablation (65k SAE)&lt;br/&gt;Ablate features · measure ΔP(any)"]
+    S --> N1["01 · Behavioral<br/>Does P(any) track scope?"]
+    S --> N2["02 · Discovery (65k SAE)<br/>Find licensing features at the<br/>PRE-NPI position"]
+    S --> N3["03 · Causal Ablation (65k SAE)<br/>Ablate features · measure ΔP(any)"]
 
-    N1 --&gt;|"A ≫ B (d≈2.15)&lt;br/&gt;+ residual B&gt;C (d≈0.74)"| R1["Model tracks scope&lt;br/&gt;(quantifier-driven residual)"]
-    N2 --&gt;|"discover on sentential&lt;br/&gt;negation ONLY"| R2["SCOPE_SPECIFIC features&lt;br/&gt;validated on held-out items"]
-    N2 --&gt;|"feature indices&lt;br/&gt;(65k-specific)"| N3
-    N3 --&gt;|"generalization test on&lt;br/&gt;no / few / question / without"| R3["Abstract licensing&lt;br/&gt;+ double dissociation&lt;br/&gt;+ negative control"]
+    N1 -->|"A >> B (d~2.15)<br/>+ residual B>C (d~0.74)"| R1["Model tracks scope<br/>(quantifier-driven residual)"]
+    N2 -->|"discover on sentential<br/>negation ONLY"| R2["SCOPE_SPECIFIC features<br/>validated on held-out items"]
+    N2 -->|"feature indices<br/>(65k-specific)"| N3
+    N3 -->|"generalization test on<br/>no / few / question / without"| R3["Abstract licensing<br/>+ double dissociation<br/>+ negative control"]
 
-    R3 --&gt; REV["Reverse ablation&lt;br/&gt;(unlicensed features)"]
-    REV --&gt;|"no releasable suppressor"| ASYM["Licensing is&lt;br/&gt;causally ASYMMETRIC"]
+    R3 --> REV["Reverse ablation<br/>(unlicensed features)"]
+    REV -->|"no releasable suppressor"| ASYM["Licensing is<br/>causally ASYMMETRIC"]
 
     classDef data fill:#fdf2e0,stroke:#c99a3b,stroke-width:1px,color:#4a3a1a;
     classDef nb fill:#e8eef7,stroke:#5b7fa6,stroke-width:1px,color:#1f3247;
@@ -54,6 +54,7 @@ flowchart TD
     class N1,N2,N3,REV nb;
     class R1,R2,R3,ASYM res;
 ```
+
 ---
 
 ## Method Note
@@ -163,7 +164,7 @@ store a Hugging Face token (with Gemma-2 access) in Kaggle Secrets as `HF_TOKEN`
 
 ## References
 
+- Gemma Team (2024). Gemma 2: Improving Open Language Models at a Practical Size. arXiv preprint arXiv:2408.00118. https://arxiv.org/abs/2408.00118
 - Kletz, D., Candito, M., & Amsili, P. (2024). Probing structural constraints of negation in Pretrained Language Models. In Proceedings of the 24th Nordic Conference on Computational Linguistics (NoDaLiDa), pp. 541–554, Tórshavn, Faroe Islands. arXiv preprint arXiv:2408.03070. https://arxiv.org/abs/2408.03070
 - Lieberum, T., Rajamanoharan, S., Conmy, A., Smith, L., Sonnerat, N., Varma, V., Kramár, J., Dragan, A., Shah, R., & Nanda, N. (2024). Gemma Scope: Open Sparse Autoencoders Everywhere All At Once on Gemma 2. arXiv preprint arXiv:2408.05147. https://arxiv.org/abs/2408.05147
-- Gemma Team (2024). Gemma 2: Improving Open Language Models at a Practical Size. arXiv preprint arXiv:2408.00118. https://arxiv.org/abs/2408.00118
 - Lin, J. & Bloom, J. (2024). Neuronpedia: Interactive reference and tooling for analyzing neural networks. https://neuronpedia.org
