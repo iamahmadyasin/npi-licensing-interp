@@ -1,0 +1,168 @@
+# Do Language Models Represent Negation Scope, or Just Negation Presence?
+
+A mechanistic interpretability study of negative-polarity-item (NPI) licensing in
+Gemma-2-2B, using sparse autoencoders (SAEs) to isolate individual features and
+causal ablation to test them.
+
+> **Result.** Features discovered using only "not" sentences causally drive the
+> model's expectation of a licensed NPI ("any") even in environments with no negation at
+> all (questions, "without") so the model encodes an abstract licensing relation, not
+> a negation detector. General and negation-specific licensing features doubly dissociate.
+
+---
+
+## Motivation
+
+Negative-polarity items like *any* are grammatical only when licensed:
+
+| | Sentence | Grammatical? |
+|---|---|---|
+| **A** | The manager did **not** approve **any** proposals. | licensed (in scope) |
+| **B** | The manager who did **not** approve the budget reviewed **any** proposals. | licensor out of scope |
+| **C** | The manager did approve **any** proposals. | no licensor |
+
+Kletz et al. (2024) used linear probes to ask whether models represent the scope of the
+licensor or merely its presence, but probes read distributed signals and cannot isolate
+a single causal component. We use SAEs to isolate features and causally ablate them
+which is something probes cannot do.
+
+---
+
+## Pipeline
+
+```mermaid
+flowchart TD
+    S["npi_stimuli.csv<br/>80 items · 5 licensing environments<br/>(single source of truth)"]
+
+    S --> N1["01 · Behavioral<br/>Does P(any) track scope?"]
+    S --> N3["02 · Discovery (65k SAE)<br/>Find licensing features at the<br/>PRE-NPI position"]
+    S --> N4["03 · Causal Ablation (65k SAE)<br/>Ablate features · measure ΔP(any)"]
+
+    N1 -->|"A ≫ B (d≈2.15)<br/>+ residual B>C (d≈0.74)"| R1["Model tracks scope<br/>(quantifier-driven residual)"]
+    N2 -->|"discover on sentential<br/>negation ONLY"| R3["SCOPE_SPECIFIC features<br/>validated on held-out items"]
+    N3 -->|"feature indices<br/>(65k-specific)"| N4
+    N4 -->|"generalization test on<br/>no / few / question / without"| R4["Abstract licensing<br/>+ double dissociation<br/>+ negative control"]
+
+    R4 --> REV["Reverse ablation<br/>(unlicensed features)"]
+    REV -->|"no releasable suppressor"| ASYM["Licensing is<br/>causally ASYMMETRIC"]
+
+    classDef nb fill:#1f6feb,stroke:#0b3d91,color:#fff;
+    classDef res fill:#238636,stroke:#0f5323,color:#fff;
+    classDef data fill:#8957e5,stroke:#4b2a8a,color:#fff;
+    class N1,N2,N3 nb;
+    class R1,R3,R4,ASYM res;
+    class S data;
+    class REV nb;
+```
+
+> **Method note** An earlier version intervened at the NPI token
+> itself and produced exactly zero effect on every trial. Cause: attention is causal and
+> P(any) is computed from the position before "any", so an intervention at/after that
+> token cannot affect it. The fix is to intervene at the pre-NPI position.
+
+---
+
+## Repository layout
+
+```
+.
+├── README.md
+├── requirements.txt
+├── stimuli/
+│   └── npi_stimuli.csv            # 80 items, 5 environments
+├── notebooks/
+│   ├── 01_behavioral.ipynb        # behavioral validation
+│   ├── 02_discovery_prenpi.ipynb  # 65k SAE feature discovery
+│   └── 03_ablation_prenpi.ipynb   # causal ablation + reverse test
+├── results/
+│   ├── figures/                   # plots referenced below
+│   └── tables/                    # 03_ablation_full.csv, 02_validated_features.csv, ...
+└── PROJECT_LOG.md                 # full design-decision + error log
+```
+
+---
+
+## Results
+
+### 1. Behavioral
+Log P(any) is far higher when the NPI is in scope (A) than out of scope (B) or unlicensed (C).
+Scope dominates (**A ≫ B, d ≈ 2.15**); a smaller residual-presence effect (B > C,
+d ≈ 0.74, p < .001) appears, driven by quantifier environments i.e. a trapped "few"/"no"
+leaks some licensing signal, a trapped "not" does not.
+
+![Behavioral results](results/figures/01_behavioral.png)
+
+### 2. Discovery
+
+65k-width GemmaScope SAEs yield features that fire strongly in A and near-zero in B/C,
+validated on held-out items (t up to 35, p < 1e-9). Discovery used sentential negation
+only; all other environments were held out for generalization.
+
+![Discovered features](results/figures/03_features.png)
+
+### 3. Causal ablation
+
+Ablating the discovered features reduces P(any) selectively in condition A, far above
+the SAE reconstruction noise floor, and in environments with no negation
+at all (questions, "without"). A negation-specific feature dissociates cleanly (works only
+under negation); a negative control shows no effect.
+
+![Ablation results](results/figures/04_ablation.png)
+
+| Ablation target | Δlog P(any) in A | Selectivity (A−C) | Generalizes to no-negation envs? |
+|---|---|---|---|
+| L20 F31666 (general) | **+2.69** (~4× noise floor) | d ≈ 1.95, p < 1e-6 | yes |
+| L22 F6415 (general) | **+1.44** | d ≈ 1.44, p < 1e-6 | yes |
+| L14 F51903 (negation-specific) | +0.32 (neg only) | small | zero in no/few/question |
+| L22 F22498 (control) | +0.03 | ~100× smaller | null, as intended |
+| COMBINED (top 3) | **+3.15** | d ≈ 1.90 | yes |
+
+### 4. Reverse test
+
+Ablating features that fire for unlicensed NPIs did not raise P(any) (small effects,
+wrong direction, vanish when combined). This suggests that the model maintains a positive, causally-efficacious
+representation of licensed NPIs but no releasable suppressor of unlicensed ones.
+
+### 5. Qualitative validation
+
+Each feature's natural web-text behavior matches its causal role: general features have
+polarity-item logits (anything, anymore, anywhere, anyone) and fire across constructions;
+the negation-specific feature fires on "not V"; the control fires on formulaic temporal
+"any" (at any time). This convergence argues the causal effects are not SAE artifacts.
+
+---
+
+## Findings at a glance
+
+- **Primary.** Model tracks scope behaviorally; SAE features at the pre-NPI position
+  causally drive NPI expectation; the effect generalizes to negation-free licensing →
+  abstract licensing representation.
+- **Secondary.** Double dissociation (general vs negation-specific features);
+  distributed/redundant coding (COMBINED > individual).
+- **Tertiary.** Systematic environment gradient (few/no > negation > without > question);
+  licensing is causally asymmetric (no suppressor); negative control behaves as required.
+- **Methods.** (1) Causal ablation of a token's probability must intervene upstream of
+  that token. (2) SAE width lowers the reconstruction noise floor and gates detectable
+  effects; report magnitude separately from significance.
+
+See [`PROJECT_LOG.md`](PROJECT_LOG.md) for the full design-decision and error record.
+
+---
+
+## Reproducing
+
+**Environment.** Kaggle (GPU P100, or T4×2 pinned to a single device). Enable Internet;
+store a Hugging Face token (with Gemma-2 access) in Kaggle Secrets as `HF_TOKEN`; attach
+`stimuli/npi_stimuli.csv` as a Kaggle Dataset.
+
+**Key invariants:** intervene and measure at the pre-NPI position (`any_pos − 1`);
+`forward_pre_hook` on layer L+1 with `use_cache=False`; 65k feature indices only; A-vs-B stats on triplet items, A-vs-C on all items.
+
+---
+
+## References
+
+- Kletz, D., Candito, M., & Amsili, P. (2024). Probing structural constraints of negation in Pretrained Language Models. In Proceedings of the 24th Nordic Conference on Computational Linguistics (NoDaLiDa), pp. 541–554, Tórshavn, Faroe Islands. arXiv preprint arXiv:2408.03070. https://arxiv.org/abs/2408.03070
+
+*Model: `google/gemma-2-2b`. SAEs: `gemma-scope-2b-pt-res-canonical`, width 65k. Features
+inspected via Neuronpedia.*
