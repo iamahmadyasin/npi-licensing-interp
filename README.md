@@ -32,33 +32,34 @@ which is something probes cannot do.
 
 ```mermaid
 flowchart TD
-    S["npi_stimuli.csv<br/>80 items · 5 licensing environments<br/>(single source of truth)"]
+    S["npi_stimuli.csv&lt;br/&gt;80 items · 5 licensing environments&lt;br/&gt;(single source of truth)"]
 
-    S --> N1["01 · Behavioral<br/>Does P(any) track scope?"]
-    S --> N3["02 · Discovery (65k SAE)<br/>Find licensing features at the<br/>PRE-NPI position"]
-    S --> N4["03 · Causal Ablation (65k SAE)<br/>Ablate features · measure ΔP(any)"]
+    S --&gt; N1["01 · Behavioral&lt;br/&gt;Does P(any) track scope?"]
+    S --&gt; N2["02 · Discovery (65k SAE)&lt;br/&gt;Find licensing features at the&lt;br/&gt;PRE-NPI position"]
+    S --&gt; N3["03 · Causal Ablation (65k SAE)&lt;br/&gt;Ablate features · measure ΔP(any)"]
 
-    N1 -->|"A ≫ B (d≈2.15)<br/>+ residual B>C (d≈0.74)"| R1["Model tracks scope<br/>(quantifier-driven residual)"]
-    N2 -->|"discover on sentential<br/>negation ONLY"| R3["SCOPE_SPECIFIC features<br/>validated on held-out items"]
-    N3 -->|"feature indices<br/>(65k-specific)"| N4
-    N4 -->|"generalization test on<br/>no / few / question / without"| R4["Abstract licensing<br/>+ double dissociation<br/>+ negative control"]
+    N1 --&gt;|"A ≫ B (d≈2.15)&lt;br/&gt;+ residual B&gt;C (d≈0.74)"| R1["Model tracks scope&lt;br/&gt;(quantifier-driven residual)"]
+    N2 --&gt;|"discover on sentential&lt;br/&gt;negation ONLY"| R2["SCOPE_SPECIFIC features&lt;br/&gt;validated on held-out items"]
+    N2 --&gt;|"feature indices&lt;br/&gt;(65k-specific)"| N3
+    N3 --&gt;|"generalization test on&lt;br/&gt;no / few / question / without"| R3["Abstract licensing&lt;br/&gt;+ double dissociation&lt;br/&gt;+ negative control"]
 
-    R4 --> REV["Reverse ablation<br/>(unlicensed features)"]
-    REV -->|"no releasable suppressor"| ASYM["Licensing is<br/>causally ASYMMETRIC"]
+    R3 --&gt; REV["Reverse ablation&lt;br/&gt;(unlicensed features)"]
+    REV --&gt;|"no releasable suppressor"| ASYM["Licensing is&lt;br/&gt;causally ASYMMETRIC"]
 
-    classDef nb fill:#1f6feb,stroke:#0b3d91,color:#fff;
-    classDef res fill:#238636,stroke:#0f5323,color:#fff;
-    classDef data fill:#8957e5,stroke:#4b2a8a,color:#fff;
-    class N1,N2,N3 nb;
-    class R1,R3,R4,ASYM res;
+    classDef data fill:#fdf2e0,stroke:#c99a3b,stroke-width:1px,color:#4a3a1a;
+    classDef nb fill:#e8eef7,stroke:#5b7fa6,stroke-width:1px,color:#1f3247;
+    classDef res fill:#e9f2ec,stroke:#6a9c7c,stroke-width:1px,color:#1f3b2c;
+
     class S data;
-    class REV nb;
+    class N1,N2,N3,REV nb;
+    class R1,R2,R3,ASYM res;
 ```
+---
 
-> **Method note** An earlier version intervened at the NPI token
-> itself and produced exactly zero effect on every trial. Cause: attention is causal and
-> P(any) is computed from the position before "any", so an intervention at/after that
-> token cannot affect it. The fix is to intervene at the pre-NPI position.
+## Method Note
+
+All experiments use Gemma 2 2B (Gemma Team, 2024). We analyze residual-stream SAE features from Gemma Scope (Lieberum et al., 2024), specifically the gemma-scope-2b-pt-res-canonical suite at width 65,536 (65k), hosted on HuggingFace. Feature dashboards were inspected via Neuronpedia (Lin & Bloom, 2024). 
+An earlier version intervened at the NPI token itself and produced exactly zero effect on every trial. Cause: attention is causal and P(any) is computed from the position before "any", so an intervention at/after that token cannot affect it. The fix is to intervene at the pre-NPI position.
 
 ---
 
@@ -98,7 +99,7 @@ leaks some licensing signal, a trapped "not" does not.
 validated on held-out items (t up to 35, p < 1e-9). Discovery used sentential negation
 only; all other environments were held out for generalization.
 
-![Discovered features](results/figures/03_features.png)
+![Discovered features](results/figures/02_features.png)
 
 ### 3. Causal ablation
 
@@ -107,7 +108,7 @@ the SAE reconstruction noise floor, and in environments with no negation
 at all (questions, "without"). A negation-specific feature dissociates cleanly (works only
 under negation); a negative control shows no effect.
 
-![Ablation results](results/figures/04_ablation.png)
+![Ablation results](results/figures/03_ablation.png)
 
 | Ablation target | Δlog P(any) in A | Selectivity (A−C) | Generalizes to no-negation envs? |
 |---|---|---|---|
@@ -163,6 +164,6 @@ store a Hugging Face token (with Gemma-2 access) in Kaggle Secrets as `HF_TOKEN`
 ## References
 
 - Kletz, D., Candito, M., & Amsili, P. (2024). Probing structural constraints of negation in Pretrained Language Models. In Proceedings of the 24th Nordic Conference on Computational Linguistics (NoDaLiDa), pp. 541–554, Tórshavn, Faroe Islands. arXiv preprint arXiv:2408.03070. https://arxiv.org/abs/2408.03070
-
-*Model: `google/gemma-2-2b`. SAEs: `gemma-scope-2b-pt-res-canonical`, width 65k. Features
-inspected via Neuronpedia.*
+- Lieberum, T., Rajamanoharan, S., Conmy, A., Smith, L., Sonnerat, N., Varma, V., Kramár, J., Dragan, A., Shah, R., & Nanda, N. (2024). Gemma Scope: Open Sparse Autoencoders Everywhere All At Once on Gemma 2. arXiv preprint arXiv:2408.05147. https://arxiv.org/abs/2408.05147
+- Gemma Team (2024). Gemma 2: Improving Open Language Models at a Practical Size. arXiv preprint arXiv:2408.00118. https://arxiv.org/abs/2408.00118
+- Lin, J. & Bloom, J. (2024). Neuronpedia: Interactive reference and tooling for analyzing neural networks. https://neuronpedia.org
