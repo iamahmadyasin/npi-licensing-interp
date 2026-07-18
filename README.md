@@ -78,7 +78,7 @@ An earlier version intervened at the NPI token itself and produced exactly zero 
 │   └── 03_ablation_prenpi.ipynb   # causal ablation + reverse test
 ├── results/
 │   ├── figures/                   # plots referenced below
-│   └── tables/                    # 03_ablation_full.csv, 02_validated_features.csv, ...
+│   └── tables/                    # csv outputs
 └── PROJECT_LOG.md                 # full design-decision + error log
 ```
 
